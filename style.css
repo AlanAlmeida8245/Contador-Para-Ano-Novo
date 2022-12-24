@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Azul: hsl(237, 18%, 59%)
+    --Softred: hsl(345, 95%, 68%)
+}
+
+body{
+    background-color: hsl(234, 17%, 12%);
+    max-width: 100vw;
+    height: 100%;
+}
+
+main{
+    color: hsl(345, 95%, 68%);
+}
+
+header > h1{
+    color: #fff;
+    font-family: 'Red Hat Text', sans-serif;
+    text-align: center;
+}
+header{
+    display: flex;
+    width: 22em;
+    text-align: center;
+    height: 9em;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.Timer{
+    display: flex;
+    max-width: 15rem;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.numeros{
+    display: flex;
+    text-align: center;
+    max-width: 300px;
+    justify-content: center;
+   
+   
+    
+}
+
+.Dias, .Horas, .Minutos, .Segundos{
+    background-color: hsl(236, 21%, 26%);
+    padding: 10px;
+    margin:  26px;
+    font-size: 60px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+
+    
+}
+
+.Dias > h2, .Horas > h2, .Minutos > h2, .Segundos > h2{
+ font-size: 25px;
+ color: white;
+}
+
+.temporizador{
+    display: flex;
+    font-family: 'Red Hat Text', sans-serif;
+    max-width: 31rem;
+    margin: auto;
+}
+.temporizador > h2{
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+.redes{
+    width: 1em;
+    display: flex;
+    margin: 0 auto;
+}
+
+.redes > img{
+   padding: 10px;
+}
+.attribution
+{
+    color: #fff;
+    width: 100%;
+   
+   
+}
+footer{
+   
+    width: 100%;
+    margin-top: 13.3em;
+    height: 100px;
+    background: hsl(345, 95%, 68%);
+    
+}
+footer > h1{
+
+    font-family: 'Red Hat Text', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 0px 0px 10px 10px;
+    
+}
+
+
+@media  (max-width: 650px) {
+
+        .numeros{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            
+        }
+        header{
+                max-width: 100vw;
+                height: 2em;
+                
+        }
+        .Timer{
+            flex-wrap: wrap;
+            height: 800px;
+            width: 10em;
+            margin: 0 auto;
+            
+        }
+        header{
+            width: 26em;
+        }
+        footer{
+            margin-top: -10px;
+        }
+        
+}
