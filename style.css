@@ -118,6 +118,7 @@ footer > h1{
     color: #fff;
     background-color: hsl(236, 21%, 26%);
     border-radius: 0px 0px 10px 10px;
+  
     
 }
 
@@ -131,18 +132,17 @@ footer > h1{
         }
         header{
                 max-width: 100vw;
-                height: 2em;
-                
+                height: 4em;
         }
         .Timer{
             flex-wrap: wrap;
-            height: 800px;
+            height: 1000px;
             width: 10em;
             margin: 0 auto;
             
         }
         header{
-            width: 26em;
+            max-width: 26em;
         }
         footer{
             margin-top: -10px;
