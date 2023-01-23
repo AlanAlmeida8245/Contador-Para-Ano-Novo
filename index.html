@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
-  <script src="script,js" defer></script>
+  
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -26,37 +26,40 @@
   <main>
     <div class="Timer">
 
-      <div class="numeros">
-        <div class="Dias">
-          <span id="diaD">00</span>
-          <h2>Dia(s)</h2>
-        </div>
-      
-      
-    
+          <div class="inputData">
+            <h1>Contagem regressiva</h1>
+                  <div class="container-input">
+                    <form name="form_main">
+                      <label for="numero">Data:</label>
+                      <input id='DataInput' type="date" onblur="resetCountdown()" />
+                      <br>
+                    </form>
+                  </div>
+          </div>
 
-        <div class="Horas">
-          <span id="horasD">00</span>
-          <h2>Horas</h2>
+      <div class="container">
+
+        <div class="titulo">
+          <h1>Contagem regressiva até a data selecionada:</h1>
         </div>
-        <div class="Minutos">
-          <span id="minutosD">00</span>
-          <h2>Minutos</h2>
-        </div>
-        <div class="Segundos">
-          <div id="segundosD">00</div>
-          <h2>Segundos</h2>
-        </div>
+       
+          <div class="contador">
+            <p>Dias</p>
+            <span id="days"></span> 
+            <p>Horas</p>
+            <span id="hours"></span> 
+            <p>Minutos</p>
+            <span id="minutes"></span>
+            <p>Segundos</p>
+            <span id="seconds"></span> 
+          </div>
+      
       </div>
-
     
 
- 
   </main>
 
-    <footer>
-        <h1>Desenvolvido por Alan Almeida</h1>
-    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

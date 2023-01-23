@@ -1,43 +1,24 @@
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
 
+let count_down = new Date('03/03/2025 00:00:00').getTime();
+let x = setInterval(() => countDown(), second);
 
-const Dia = document.getElementById("diaD")
-const Horas = document.getElementById("horasD")
-const Minutos = document.getElementById("minutosD")
-const Segundos = document.getElementById("segundosD")
+function countDown() {
+  let now = new Date(Date.now()).getTime();
+  let diff = count_down - now;
 
-const anoNovo = "1 jan 2022"
-onpageshow
-
-function countdown(){
-
-    const anoNovoData = new Date(anoNovo)
-    const dataCorrent = new Date();
-
-    const totalSeconds = (anoNovoData - dataCorrent) / 1000;
-     
-    const diasC = Math.floor(totalSeconds /  3600 )  / 24;
-
-    const horas = Math.floor(totalSeconds / 3600) % 24;
-    const  minutos = Math.floor(totalSeconds / 60) % 60;
-
-    const segundos = Math.floor(totalSeconds) % 60;
-
-    Dia.innerHTML = diasC;
-    Horas.innerHTML = formatTime(horas)
-    Minutos.innerHTML = formatTime(minutos)
-    Segundos.innerHTML =  formatTime(segundos)
-
+  document.getElementById('days').innerText = Math.floor(diff / day);
+  document.getElementById('hours').innerText = Math.floor(diff % day / hour);
+  document.getElementById('minutes').innerText = Math.floor(diff % hour / minute);
+  document.getElementById('seconds').innerText = Math.floor(diff % minute / second);
 }
 
-
-
-
-function formatTime(time){
-    return time < 10 ? `0${time}` : time;
-
+function resetCountdown() {
+  clearInterval(x);
+  let DataInput = document.form_main.DataInput.value;
+  count_down = new Date(`${DataInput} 00:00:00`).getTime();
+  x = setInterval(() => countDown(), second);
 }
-
-
-
-setInterval(countdown, 1000);
-
